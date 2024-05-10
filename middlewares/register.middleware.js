@@ -11,7 +11,7 @@ export const registerValidator = validator(
                     options: async (_, { req }) => {
                         const user = await userModel.findOne({ username: req.body.username });
                         if (user) {
-                            throw new Error('User is already existed');
+                            throw new Error("User is already existed");
                         }
                         return true;
                     },
@@ -22,7 +22,7 @@ export const registerValidator = validator(
                 custom: {
                     options: (value, { req }) => {
                         if (value !== req.body.password) {
-                            throw new Error('Confirm password is wrong');
+                            throw new Error("Confirm password is incorrect");
                         }
                         return true;
                     },

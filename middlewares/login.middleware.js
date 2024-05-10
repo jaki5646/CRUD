@@ -15,7 +15,7 @@ export const LoginValidator = validator(
                             await authentication(req.body.password, user);
                         }
                         else {
-                            throw new Error('Sai tài khoản hoặc mật khẩu')
+                            throw new Error("Sai tài khoản hoặc mật khẩu")
                         }
                     },
                 },
