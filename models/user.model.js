@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
 });
 
 const profileSchema = new mongoose.Schema({
-    owner: { type: mongoose.Schema.Types.ObjectId, ref: 'user', require: true, unique: true },
+    owner: { type: mongoose.Schema.Types.ObjectId, ref: 'users', require: true, unique: true },
     firstName: String,
     lastName: String,
     dateOfBirth: Date,
